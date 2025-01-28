@@ -12,8 +12,10 @@ def max_2_sum(arr)
   arr.max(2).sum
 end
 
-def sum_to_n?(arr, number)
-  # YOUR CODE HERE
+def sum_to_n?(arr, n)
+   return false if arr.size < 2
+   arr.combination(2).any? { |a, b| a + b == n }
+
 end
 
 # Part 2
