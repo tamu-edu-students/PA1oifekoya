@@ -25,7 +25,10 @@ def hello(name)
 end
 
 def starts_with_consonant?(string)
-  # YOUR CODE HERE
+  return false if s.empty?      
+  first_char = s[0].downcase    
+  return false unless first_char.match?(/[a-z]/) 
+  !%w[a e i o u].include?(first_char) 
 end
 
 def binary_multiple_of_4?(string)
