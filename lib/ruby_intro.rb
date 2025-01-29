@@ -32,7 +32,9 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
+    return false unless string =~ /\A[01]+\z/
+    decimal_value = string.to_i(2)
+    decimal_value % 4 == 0
 end
 
 # Part 3
