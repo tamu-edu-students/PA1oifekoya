@@ -24,10 +24,10 @@ def hello(name)
   "Hello, #{name}"
 end
 
-def starts_with_consonant?(string)
+def starts_with_consonant?(s)
   return false if s.empty?      
   first_char = s[0].downcase    
-  return false unless first_char.match?(/[a-z]/) 
+  return false unless first_char >= 'a' && first_char <= 'z' 
   !%w[a e i o u].include?(first_char) 
 end
 
